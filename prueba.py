@@ -7,11 +7,18 @@ activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
               18: 'Commuting',
-              20: 'Eating',
+              19: 'Fucking',
+              20: 'Drinking',
               22: 'Resting' }
 
 time_now = localtime()
 hour = time_now.tm_hour
+
+def is_naughty(activity):
+    if activity in ['Fucking', 'Drinking']:
+	return True
+    else:
+        return False
 
 '''
 Find the current activity
