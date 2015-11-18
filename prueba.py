@@ -1,5 +1,8 @@
 from time import localtime
 
+'''
+List of activities to done along the day
+'''
 activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
@@ -10,6 +13,9 @@ activities = {8: 'Sleeping',
 time_now = localtime()
 hour = time_now.tm_hour
 
+'''
+Find the current activity
+'''
 for activity_time in sorted(activities.keys()):
     if hour < activity_time:
         print activities[activity_time]
